@@ -1,3 +1,4 @@
+import multiprocessing
 import os, glob
 #import random
 #from sklearn.model_selection import train_test_split
@@ -31,3 +32,6 @@ valid_imgs_dir =os.path.join(cur_dir, 'validation')
 test_imgs_dir = os.path.join(cur_dir, 'testing')
 #print(test_imgs_dir)
 image_width, image_height = 224, 224
+num_cores = multiprocessing.cpu_count()
+batch_size = 64
+model_class_name = ['Timor', 'Stroma', 'Normal']
